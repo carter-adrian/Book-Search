@@ -5,16 +5,16 @@ import { Form, Button, Alert } from 'react-bootstrap';
 // import { loginUser } from '../utils/API';
 import Auth from '../utils/auth';
 
-  //import mutations
-  import { usemutations } from '@apolo/react-hooks';
-  import { LOGIN_USER } from '../utils/mutations';
+// importing mutations
+import { useMutation } from '@apollo/react-hooks';
+import { LOGIN_USER } from '../utils/mutations';
 
 const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
 
-    // initialize mutation
+  // initialize mutation
   const [loginUser, {error} ] = useMutation(LOGIN_USER);
 
   const handleInputChange = (event) => {
@@ -25,7 +25,7 @@ const LoginForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    // check if form has everything (as per react-bootstrap docs)
+       // check if form has everything (as per react-bootstrap docs)
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
@@ -55,7 +55,7 @@ const LoginForm = () => {
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your login credentials!
         </Alert>
-        <Form.Group className='mb-3'>
+        <Form.Group  className='mb-3'>
           <Form.Label htmlFor='email'>Email</Form.Label>
           <Form.Control
             type='text'
@@ -93,3 +93,5 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
+
