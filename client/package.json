@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "version": "0.1.0",
+  "version": "2.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
   "dependencies": {
@@ -13,7 +13,6 @@
     "bootstrap": "^4.4.1",
     "graphql": "^15.3.0",
     "graphql-tag": "^2.11.0",
-    "heroku": "^7.69.0",
     "jwt-decode": "^2.2.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
@@ -41,5 +40,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "Adrian Carter",
+  "license": "MIT"
 }
